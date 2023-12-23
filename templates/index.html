@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('/static/agritech.jpg');
+            background-size: cover;
+            color: blue;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: purple;">AgroGuide</h1>
+    <h4 style="color: fuchsia;">Welcome to our Crop Recommendation System!</h4>
+    <h4 style="color: fuchsia;">By Using This Model We Can Recommend Best Crop Please Provide Below Information</h4>
+    <form method="POST" action="prediction">
+        <label>Nitrogen</label>
+        <input type="text"  name="N">
+        <br>
+        <br>
+        <label>Phosphorous</label>
+        <input type="text"  name="P">
+        <br>
+        <br>
+        <label>Potassium</label>
+        <input type="text" name="K">
+        <br>
+        <br>
+        <label>Temperature in (Degree)</label>
+        <input type="text" name="temperature">
+        <br>
+        <br>
+        -<label>Humidity in (%)</label>
+        <input type="text" name="humidity">
+        <br>
+        <br>
+        <label>PH</label>
+        <input type="text" name="ph">
+        <br>
+        <br>
+        <label>Rainfall in (mm)</label>
+        <input type="text" name="rainfall">
+        <br>
+        <br>
+        <input type="submit" value="Recommend Crop">
+        <br>
+        <br>
+        <p style="color: yellow;">
+            {{result}}
+        </p>
+
+    </form>
+
+</body>
+</html>
